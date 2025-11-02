@@ -1,0 +1,328 @@
+/* --- Global Styles & Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* A common font choice for web */
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e3e6e6; /* Light grey background for the body */
+}
+
+/* --- Header & Nav (Simplified) --- */
+/* --- Global Styles & Reset (Ensure this is at the top) --- */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    /* This makes the hover border effect easier to manage */
+}
+
+/* --- Header & Navbar Styling --- */
+header {
+    background-color: #131921; /* Dark navy Amazon header color */
+    color: white;
+}
+
+/* Top Navbar Container */
+.navbar-top {
+    height: 60px;
+    display: flex;
+    align-items: center; /* Vertically centers the items */
+    justify-content: space-evenly; /* Evenly spaces the main items */
+    padding: 0 10px;
+}
+
+/* Hover Border Effect for all interactive header elements */
+.border {
+    padding: 5px 8px;
+    border: 1px solid transparent; /* Transparent border for consistent spacing */
+    cursor: pointer;
+    transition: border 0.1s;
+}
+
+.border:hover {
+    border: 1px solid white; /* White border on hover */
+    border-radius: 2px;
+}
+
+/* 1. Logo */
+.nav-logo {
+    display: flex;
+    align-items: flex-end; /* Align the logo text to the bottom */
+    height: 50px;
+}
+
+.logo {
+    /* Placeholder for Amazon logo image/sprite */
+    font-size: 24px;
+    font-weight: 700;
+    color: #ff9900;
+    line-height: 18px;
+}
+
+.logo-text {
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 2px;
+    padding-bottom: 2px;
+    color: white;
+}
+
+/* 2. Deliver To Location */
+.nav-address {
+    padding: 8px 5px;
+}
+
+.add-first {
+    color: #cccccc;
+    font-size: 12px;
+    margin-left: 15px; /* Offset to align with the bottom text */
+}
+
+.add-icon {
+    display: flex;
+    align-items: center;
+}
+
+.icon-location {
+    font-size: 18px;
+    margin-right: 2px;
+}
+
+.add-second {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* 3. Search Bar */
+.nav-search {
+    display: flex;
+    background-color: #febd69; /* Orange search button color */
+    width: 620px;
+    height: 40px;
+    border-radius: 4px;
+    overflow: hidden; /* Important for clean look */
+}
+
+.nav-search:focus-within {
+    border: 3px solid #f3a847; /* Yellow border on focus */
+}
+
+.search-select {
+    background-color: #f3f3f3;
+    width: 50px;
+    text-align: center;
+    border: none;
+    border-right: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    padding: 0 5px;
+    color: #555;
+}
+
+.search-input {
+    width: 100%; /* Takes up most of the space */
+    font-size: 1rem;
+    border: none;
+    padding-left: 10px;
+    outline: none;
+}
+
+.search-icon {
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #131921;
+}
+
+/* 4. Language Dropdown */
+.nav-lang {
+    display: flex;
+    align-items: center;
+}
+
+.nav-lang select {
+    background: transparent;
+    color: white;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* 5. Sign In / 6. Returns & Orders */
+.nav-signin, .nav-return {
+    line-height: 14px;
+}
+
+.nav-signin span, .nav-return span {
+    font-size: 12px;
+    white-space: nowrap; /* Prevents "Hello, sign in" from wrapping */
+}
+
+.nav-second {
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* 7. Cart */
+.nav-cart {
+    display: flex;
+    align-items: flex-end;
+    font-weight: 700;
+    font-size: 14px;
+    height: 50px;
+}
+
+.icon-cart {
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+
+/* --- Bottom Navigation Panel (Sub-Navbar) --- */
+.nav-bottom {
+    height: 40px;
+    background-color: #232f3e; /* Secondary dark color */
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    font-size: 14px;
+}
+
+.panel-all {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+.icon-menu {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.panel-links a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 10px;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.panel-links a:hover {
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+.panel-deals {
+    margin-left: auto; /* Pushes this element to the right */
+    padding-right: 15px;
+    font-weight: 700;
+}
+
+.panel-deals a {
+    color: white;
+    text-decoration: none;
+}
+/* --- Hero Section --- */
+.hero-section {
+    background-color: #c0bdb8; /* Placeholder for the blue-grey gradient */
+    height: 300px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background-image: linear-gradient(to bottom, #74a2b9, #366f8b); /* Gradient color from your image */
+    position: relative;
+    overflow: hidden; /* Important for containing the banner image */
+}
+
+.hero-image {
+    width: 80%; /* Placeholder for the massager image */
+    height: 90%;
+    object-fit: contain;
+}
+
+
+/* --- Shop Section (The Product Cards) --- */
+.shop-section {
+    display: grid;
+    /* This creates a 4-column layout with equal width for all cards */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* Space between the cards */
+    padding: 20px;
+    max-width: 1500px; /* Amazon often centers content on wide screens */
+    margin: -200px auto 40px auto; /* Pulls the cards up to overlay the hero section */
+    position: relative; /* Ensure the cards sit above the hero section */
+}
+
+/* --- Individual Product Card Styling --- */
+.product-card {
+    background-color: white;
+    padding: 20px;
+    height: 420px; /* Fixed height for consistent look */
+    display: flex;
+    flex-direction: column; /* Stacks the title, images, and link vertically */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.card-image-container {
+    /* Use CSS Grid to arrange the four small product images */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+    gap: 10px;
+    flex-grow: 1; /* Allows the container to fill available vertical space */
+    margin-bottom: 10px;
+}
+
+.card-image-container a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.card-image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.card-image-container span {
+    font-size: 12px;
+    display: block; /* Ensures text wraps below the image */
+    color: #0f1111;
+}
+
+/* Special case for the Headphones card (Starting ₹149) which has a different internal layout */
+.two-column-grid {
+    gap: 20px; /* Increase gap for cleaner look on logos */
+    grid-template-rows: 1fr 1fr;
+}
+.two-column-grid a {
+    text-align: center;
+}
+
+/* 'Explore all' link style */
+.shop-now-link {
+    font-size: 13px;
+    color: #007185; /* Amazon's link color */
+    text-decoration: none;
+    margin-top: auto; /* Pushes the link to the bottom */
+}
+
+.shop-now-link:hover {
+    color: #c7511f; /* Hover color */
+    text-decoration: underline;
+}

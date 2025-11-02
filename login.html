@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MyApp - Login &amp; Sign Up</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2badee" /* Retained original primary color */,
+              "background-light": "#f6f7f8",
+              "background-dark":
+                "#0a1318" /* Slightly darker background for better contrast */,
+              "card-dark": "#101c22",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "0.75rem",
+              xl: "1rem",
+              full: "9999px",
+            } /* Increased default radius for a softer look */,
+          },
+        },
+      };
+    </script>
+    <style>
+              /* Add smooth color transitions for better theme switching */
+              body, .card, .form-input, button {
+                  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+              }
+              /* Ensure the body font rendering is smooth */
+              body {
+                  -webkit-font-smoothing: antialiased;
+                  -moz-osx-font-smoothing: grayscale;
+              }
+         
+    </style>
+  </head>
+  <body class="font-display">
+    <div
+      class="relative flex min-h-screen w-full flex-col items-center justify-center bg-background-light dark:bg-background-dark text-[#0d171b] dark:text-gray-200 group/design-root overflow-x-hidden p-4 sm:p-6 lg:p-8"
+    >
+      <!-- Top Navigation Bar (with more aesthetic spacing) -->
+      <div
+        class="absolute top-0 left-0 right-0 px-4 sm:px-8 md:px-12 lg:px-40 py-5"
+      >
+        <header
+          class="flex items-center justify-between whitespace-nowrap w-full max-w-[960px] mx-auto"
+        >
+          <div class="flex items-center gap-4 text-inherit">
+            <!-- START: Amazon Logo/Text Replacement -->
+            <a
+              href=""
+              class="text-3xl font-extrabold tracking-tight text-[#0d171b] dark:text-white transition-colors duration-300"
+            >
+              <span class="text-[#ff9900] dark:text-[#ff9900]">A</span>mazon
+            </a>
+            <!-- Go to Home Page Button/Link -->
+            <a
+              href="index.html"
+              class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors duration-200 hidden sm:inline-block"
+            >
+              Go to Home Page
+            </a>
+            <!-- END: Amazon Logo/Text Replacement -->
+          </div>
+          <div class="flex items-center">
+            <!-- Dark/Light Mode Toggle Button with ID for JS functionality -->
+            <button
+              id="theme-toggle"
+              class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800/60 text-slate-600 dark:text-slate-300 transition-colors duration-300 hover:bg-slate-300 dark:hover:bg-slate-700/60"
+            >
+              <span class="material-symbols-outlined block dark:hidden"
+                >dark_mode</span
+              >
+              <span class="material-symbols-outlined hidden dark:block"
+                >light_mode</span
+              >
+            </button>
+          </div>
+        </header>
+      </div>
+      <!-- Main Content Area -->
+      <main
+        class="flex w-full max-w-md flex-col items-center justify-center pt-20 pb-10"
+      >
+        <!-- Card styling slightly enhanced with a stronger dark mode background -->
+        <div
+          class="card w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-card-dark shadow-xl p-6 sm:p-8"
+        >
+          <!-- Headline & Meta Text -->
+          <div class="text-center">
+            <h1
+              class="text-[#0d171b] dark:text-white tracking-tight text-[32px] font-bold leading-tight pb-2"
+            >
+              Welcome Back!
+            </h1>
+            <p
+              class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal pb-6"
+            >
+              Please enter your details to sign in
+            </p>
+          </div>
+          <!-- Segmented Control for Login/Sign Up -->
+          <div class="flex pb-6">
+            <div
+              class="flex h-10 flex-1 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800/60 p-1"
+            >
+              <label
+                class="flex h-full grow cursor-pointer items-center justify-center overflow-hidden rounded-lg px-2 text-sm font-medium leading-normal text-slate-500 dark:text-slate-400 has-[:checked]:bg-white has-[:checked]:text-[#0d171b] has-[:checked]:shadow-md dark:has-[:checked]:bg-slate-700/50 dark:has-[:checked]:text-white transition-all duration-200"
+              >
+                <span class="truncate">Login</span>
+                <input
+                  checked=""
+                  class="invisible w-0"
+                  name="auth-toggle"
+                  type="radio"
+                  value="Login"
+                />
+              </label>
+              <label
+                class="flex h-full grow cursor-pointer items-center justify-center overflow-hidden rounded-lg px-2 text-sm font-medium leading-normal text-slate-500 dark:text-slate-400 has-[:checked]:bg-white has-[:checked]:text-[#0d171b] has-[:checked]:shadow-md dark:has-[:checked]:bg-slate-700/50 dark:has-[:checked]:text-white transition-all duration-200"
+              >
+                <span class="truncate">Sign Up</span>
+                <input
+                  class="invisible w-0"
+                  name="auth-toggle"
+                  type="radio"
+                  value="Sign Up"
+                />
+              </label>
+            </div>
+          </div>
+          <!-- Form Fields -->
+          <form class="flex flex-col gap-4">
+            <div class="flex flex-col">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p
+                  class="text-sm font-medium leading-normal pb-2 text-slate-700 dark:text-slate-300"
+                >
+                  Email
+                </p>
+                <input
+                  class="form-input h-12 flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-slate-800 p-[15px] text-sm font-normal leading-normal text-[#0d171b] dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:border-primary focus:ring-2 focus:ring-primary/40"
+                  placeholder="Enter your email address"
+                  type="email"
+                  value=""
+                />
+              </label>
+            </div>
+            <div class="flex flex-col">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p
+                  class="text-sm font-medium leading-normal pb-2 text-slate-700 dark:text-slate-300"
+                >
+                  Password
+                </p>
+                <input
+                  class="form-input h-12 flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-slate-800 p-[15px] text-sm font-normal leading-normal text-[#0d171b] dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:border-primary focus:ring-2 focus:ring-primary/40"
+                  placeholder="Enter your password"
+                  type="password"
+                  value=""
+                />
+              </label>
+            </div>
+            <div class="flex justify-end pt-1 pb-4">
+              <a
+                class="text-sm font-medium text-primary hover:underline"
+                href="#"
+                >Forgot Password?</a
+              >
+            </div>
+            <button
+              class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-primary text-white gap-2 text-base font-bold leading-normal tracking-[-0.015em] transition-all duration-200 hover:opacity-90 active:scale-[0.99] shadow-md hover:shadow-lg shadow-primary/40"
+              type="submit"
+            >
+              Login
+            </button>
+          </form>
+          <!-- Social Logins -->
+          <div class="relative flex items-center py-6">
+            <div
+              class="flex-grow border-t border-slate-200 dark:border-slate-700"
+            ></div>
+            <span
+              class="mx-4 flex-shrink text-xs font-medium uppercase text-slate-400 dark:text-slate-500"
+              >Or continue with</span
+            >
+            <div
+              class="flex-grow border-t border-slate-200 dark:border-slate-700"
+            ></div>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button
+              class="flex h-12 flex-1 items-center justify-center gap-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/60 px-4 text-sm font-medium text-slate-700 dark:text-slate-300 transition-colors duration-200 hover:bg-slate-50 dark:hover:bg-slate-800/80"
+            >
+              <img
+                alt="Google logo"
+                class="h-5 w-5"
+                data-alt="Google logo"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjUC0bfwm0NMAZ9hxGIh_23A2cgZvuu-3a-l_atBbTJ_ivtOfKnYo-Bze1nB2rtgOpaKSiFBQkZAkvZxdeYLvTNWuXtReA4nG9AVyX5u2S_FQ5Xblm2JWMH5bsbVyNqZL9lzJXw91LDuIvloAVyJ8ZsZoSIy7NItcSvS653t1pHe7SPYMh3dj-kdk5JiPhZLlS0JIZx8eo3wkFdyDMhkjg15qHKZ2ushH1oESi33MZKobvw2TFSXUEIkdbfDPxm1xH-zqxFst6qIQ"
+              />
+              <span>Google</span>
+            </button>
+            <button
+              class="flex h-12 flex-1 items-center justify-center gap-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/60 px-4 text-sm font-medium text-slate-700 dark:text-slate-300 transition-colors duration-200 hover:bg-slate-50 dark:hover:bg-slate-800/80"
+            >
+              <img
+                alt="GitHub logo"
+                class="h-5 w-5 invert-0 dark:invert"
+                data-alt="GitHub logo"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEFH2Grtr278aRFzZeFdR__SnYwrKQG01CSubEz7nApca8J9AC_KSYrAKuwl2Cau6zPqno5JY2RnTVLdSIBZBpdxipRVbcjPpqUaXvg70gW2RbJSPt54yeg_igcktT5_3CIc6DTPDZPint4IUd2Jk08jET4YdyHM8RWF8Z0zSU_o-pa1IgWfUrphIfZU4XeHfyFC_f_Tr4WhQP9lPEaiXY2wp5HWzW_sNOVtTbBZINNbzy7hpdfvlFKq2nF4QpBy5xpMHoQH6WASs"
+              />
+              <span>GitHub</span>
+            </button>
+          </div>
+        </div>
+        <!-- Toggle Prompt -->
+        <div
+          class="pt-6 text-center text-sm text-slate-600 dark:text-slate-400"
+        >
+          <p>
+            Don't have an account?
+            <a class="font-bold text-primary hover:underline" href="#"
+              >Sign Up</a
+            >
+          </p>
+        </div>
+      </main>
+    </div>
+
+    <!-- JavaScript for Dark Mode Functionality -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const themeToggle = document.getElementById("theme-toggle");
+        const html = document.documentElement;
+
+        // Function to set the theme
+        const setTheme = (theme) => {
+          if (theme === "dark") {
+            html.classList.add("dark");
+            localStorage.setItem("theme", "dark");
+          } else {
+            html.classList.remove("dark");
+            localStorage.setItem("theme", "light");
+          }
+        };
+
+        // 1. Initial Load: Check localStorage, then system preference
+        let storedTheme = localStorage.getItem("theme");
+        const userPrefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        if (storedTheme) {
+          setTheme(storedTheme);
+        } else if (userPrefersDark) {
+          // Default to system preference if no theme is stored
+          setTheme("dark");
+        } else {
+          // Default to light mode
+          setTheme("light");
+        }
+
+        // 2. Toggle Functionality
+        themeToggle.addEventListener("click", () => {
+          if (html.classList.contains("dark")) {
+            setTheme("light");
+          } else {
+            setTheme("dark");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
