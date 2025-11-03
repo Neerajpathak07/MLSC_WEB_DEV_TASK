@@ -54,37 +54,53 @@ toggleToLogin.addEventListener('click', function() {
     modalTitle.textContent = 'Login';
 });
 
+// Helper function to show/hide error messages
+const show_error = (input, message) => {
+    const error_element = document.getElementById(`${input.id}-error`);
+    error_element.textContent = message;
+    error_element.style.display = 'block';
+};
+
+const hide_error = (input) => {
+    const error_element = document.getElementById(`${input.id}-error`);
+    error_element.style.display = 'none';
+};
+
 // Form Validation
 // Login form validation
 loginForm.addEventListener('submit', function(e) {
     e.preventDefault();
     let isValid = true;
 
-    // Email validation
     const loginEmail = document.getElementById('login-email');
-    const loginEmailError = document.getElementById('login-email-error');
-    if (!validateEmail(loginEmail.value)) {
-        loginEmailError.style.display = 'block';
+    if (loginEmail.value.trim() === '') {
+        show_error(loginEmail, 'Email is required.');
+        isValid = false;
+    } else if (!validateEmail(loginEmail.value)) {
+        show_error(loginEmail, 'Please enter a valid email.');
         isValid = false;
     } else {
-        loginEmailError.style.display = 'none';
+        hide_error(loginEmail);
     }
 
-    // Password validation
     const loginPassword = document.getElementById('login-password');
-    const loginPasswordError = document.getElementById('login-password-error');
     if (loginPassword.value.length < 6) {
-        loginPasswordError.style.display = 'block';
+        show_error(loginPassword, 'Password must be at least 6 characters.');
         isValid = false;
     } else {
-        loginPasswordError.style.display = 'none';
+        hide_error(loginPassword);
     }
 
     if (isValid) {
-        alert('Login successful!');
-        authModal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-        loginForm.reset();
+        // Replace alert with a success message in the UI
+        const formFooter = loginForm.querySelector('.form-footer');
+        formFooter.innerHTML = '<p style="color: green;">Login successful!</p>';
+        setTimeout(() => {
+            authModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            loginForm.reset();
+            formFooter.innerHTML = `<p>Don't have an account? <span class="toggle-form" id="toggle-to-signup">Sign Up</span></p>`;
+        }, 2000);
     }
 });
 
@@ -93,61 +109,60 @@ signupForm.addEventListener('submit', function(e) {
     e.preventDefault();
     let isValid = true;
 
-    // Name validation
     const signupName = document.getElementById('signup-name');
-    const signupNameError = document.getElementById('signup-name-error');
     if (signupName.value.trim() === '') {
-        signupNameError.style.display = 'block';
+        show_error(signupName, 'Full Name is required.');
         isValid = false;
     } else {
-        signupNameError.style.display = 'none';
+        hide_error(signupName);
     }
 
-    // Email validation
     const signupEmail = document.getElementById('signup-email');
-    const signupEmailError = document.getElementById('signup-email-error');
-    if (!validateEmail(signupEmail.value)) {
-        signupEmailError.style.display = 'block';
+    if (signupEmail.value.trim() === '') {
+        show_error(signupEmail, 'Email is required.');
+        isValid = false;
+    } else if (!validateEmail(signupEmail.value)) {
+        show_error(signupEmail, 'Please enter a valid email.');
         isValid = false;
     } else {
-        signupEmailError.style.display = 'none';
+        hide_error(signupEmail);
     }
 
-    // Password validation
     const signupPassword = document.getElementById('signup-password');
-    const signupPasswordError = document.getElementById('signup-password-error');
     if (signupPassword.value.length < 6) {
-        signupPasswordError.style.display = 'block';
+        show_error(signupPassword, 'Password must be at least 6 characters.');
         isValid = false;
     } else {
-        signupPasswordError.style.display = 'none';
+        hide_error(signupPassword);
     }
 
-    // Confirm password validation
     const signupConfirmPassword = document.getElementById('signup-confirm-password');
-    const signupConfirmPasswordError = document.getElementById('signup-confirm-password-error');
     if (signupPassword.value !== signupConfirmPassword.value) {
-        signupConfirmPasswordError.style.display = 'block';
+        show_error(signupConfirmPassword, 'Passwords do not match.');
         isValid = false;
     } else {
-        signupConfirmPasswordError.style.display = 'none';
+        hide_error(signupConfirmPassword);
     }
 
     if (isValid) {
-        alert('Account created successfully!');
-        authModal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-        signupForm.reset();
-        // Switch back to login form
-        signupForm.style.display = 'none';
-        loginForm.style.display = 'block';
-        modalTitle.textContent = 'Login';
+        const formFooter = signupForm.querySelector('.form-footer');
+        formFooter.innerHTML = '<p style="color: green;">Account created successfully!</p>';
+        setTimeout(() => {
+            authModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            signupForm.reset();
+            formFooter.innerHTML = `<p>Already have an account? <span class="toggle-form" id="toggle-to-login">Login</span></p>`;
+            // Switch back to login form
+            signupForm.style.display = 'none';
+            loginForm.style.display = 'block';
+            modalTitle.textContent = 'Login';
+        }, 2000);
     }
 });
 
 // Email validation function
 function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const re = /^[^S@]+@[^S@]+\.[^S@]+$/;
     return re.test(email);
 }
 
