@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon-like Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+ <header class="main-header">
+    
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="#">Amazon.in</a>
+        </div>
+
+        <div class="nav-location nav-link-hover">
+            <span class="nav-icon">📍</span>
+            <div class="nav-stacked-text">
+                <span class="nav-text-line1">Delivering to</span>
+                <span class="nav-text-line2">Mumbai 400001</span>
+            </div>
+        </div>
+
+        <div class="nav-search">
+            <select class="search-dropdown" aria-label="Search category">
+                <option value="all">All</option>
+                <option value="electronics">Electronics</option>
+                <option value="books">Books</option>
+                <option value="fashion">Fashion</option>
+            </select>
+            <input type="text" placeholder="Search Amazon.in" class="search-input" aria-label="Search Amazon.in">
+            <button class="search-btn" aria-label="Search">🔍</button> </div>
+
+        <div class="nav-tools">
+            <a href="#" class="nav-language nav-link-hover">
+                <span class="nav-icon">🚩</span>
+                <strong>EN</strong>
+            </a>
+
+            <div id="loginModalBtn" class="nav-link-hover nav-account">
+                <div class="nav-stacked-text">
+                    <span class="nav-text-line1">Hello, sign in</span>
+                    <span class="nav-text-line2">Account & Lists</span>
+                </div>
+            </div>
+
+            <a href="#" class="nav-link-hover nav-orders">
+                <div class="nav-stacked-text">
+                    <span class="nav-text-line1">Returns</span>
+                    <span class="nav-text-line2">& Orders</span>
+                </div>
+            </a>
+
+            <a href="#" class="nav-link-hover nav-cart">
+                <span class="nav-icon cart-icon">🛒</span>
+                <span class="nav-text-line2">Cart</span>
+            </a>
+            
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="theme-toggle-checkbox">
+                    <input type="checkbox" id="theme-toggle-checkbox" />
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="sub-navbar">
+        <a href="#" class="sub-nav-link hamburger-menu">
+            <span class="nav-icon">☰</span>
+            All
+        </a>
+        <ul class="sub-navbar-links">
+            <li><a href="#" class="sub-nav-link">Fresh</a></li>
+            <li><a href="#" class="sub-nav-link">Best Sellers</a></li>
+            <li><a href="#" class="sub-nav-link">Today's Deals</a></li>
+            <li><a href="#" class="sub-nav-link">Mobiles</a></li>
+            <li><a href="#" class="sub-nav-link">New Releases</a></li>
+            <li><a href="#" class="sub-nav-link">Electronics</a></li>
+            <li><a href="#" class="sub-nav-link">Customer Service</a></li>
+            <li><a href="#" class="sub-nav-link">Prime</a></li>
+            <li><a href="#" class="sub-nav-link">Home & Kitchen</a></li>
+            <li><a href="#" class="sub-nav-link">Fashion</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main class="container">
+        
+        <section class="hero-section">
+            <div class="hero-content-wrapper">
+                <div class="hero-arrow left-arrow">&#x2039;</div> 
+                
+                <!-- <div class="hero-text-content">
+                    <p class="super-value-text">
+                        <span class="cart-icon">🛒</span> Super Value Days
+                        <br>
+                        <span class="small-text">1<sup>st</sup> - 7<sup>th</sup> Every month</span>
+                    </p>
+                    <h1>Up to 60% off</h1>
+                    <p class="offers-text">Offers on daily needs</p>
+                    <button class="cashback-button">Extra up to ₹200 cashback*</button>
+                </div> -->
+                
+                <div class="hero-arrow right-arrow">&#x203A;</div> 
+            </div>
+        </section>
+
+        <section class="content-grid">
+            <div class="card">
+                <h3>Revamp your home in style</h3>
+                <div class="card-item-grid">
+                    <div><img src="./assets/cushionCover.webp" alt="Cushions"><p>Cushion covers</p></div>
+                    <div><img src="./assets/figurines.webp" alt="Figurines"><p>Figurines</p></div>
+                    <div><img src="./assets/homeStorage.webp" alt="Home storage"><p>Home storage</p></div>
+                    <div><img src="./assets/lighting.webp" alt="Lighting"><p>Lighting solutions</p></div>
+                </div>
+                <a href="#" class="card-link">Explore all</a>
+            </div>
+
+            <div class="card">
+                <h3>Appliances for your home | Up to 55% off</h3>
+                <div class="card-item-grid">
+                    <div><img src="./assets/airconditioner.webp" alt="AC"><p>Air conditioners</p></div>
+                    <div><img src="./assets/refergirator.jpg" alt="Refrigerators"><p>Refrigerators</p></div>
+                    <div><img src="./assets/microwaves.webp" alt="Microwaves"><p>Microwaves</p></div>
+                    <div><img src="./assets/washing.jpg" alt="Washing machines"><p>Washing machines</p></div>
+                </div>
+                <a href="#" class="card-link">See more</a>
+            </div>
+
+            <div class="card">
+                <h3>Starting ₹149 | Headphones</h3>
+                <div class="card-item-grid">
+                    <div><img src="./assets/biat.webp" alt="boAt"><p>Starting ₹149 | boAt</p></div>
+                    <div><img src="./assets/boult.webp" alt="Boult"><p>Starting ₹149 | Boult</p></div>
+                    <div><img src="./assets/noise.webp" alt="Noise"><p>Starting ₹549 | Noise</p></div>
+                    <div><img src="./assets/zebronics.webp" alt="Zebronics"><p>Starting ₹149 | Zebronics</p></div>
+                </div>
+                <a href="#" class="card-link">See all offers</a>
+            </div>
+
+            <div class="card">
+                <h3>Deals on home improvement</h3>
+                <div class="card-item-grid">
+                    <div><img src="./assets/cleaning.webp" alt="Cleaning"><p>Under ₹199 | Cleaning</p></div>
+                    <div><img src="./assets/bathroom.webp" alt="Bathroom"><p>Under ₹399 | Bathroom</p></div>
+                    <div><img src="./assets/tools.webp" alt="Tools"><p>Under ₹499 | Home tools</p></div>
+                    <div><img src="./assets/wallpaperss.webp" alt="Wallpapers"><p>Under ₹299 | Wallpapers</p></div>
+                </div>
+                <a href="#" class="card-link">Explore all</a>
+            </div>
+        </section>
+    </main>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Login or Sign Up</h2>
+            <form id="loginForm" novalidate>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required minlength="8">
+                    <small>Must be at least 8 characters long.</small>
+                </div>
+                <div id="formError" class="form-error"></div>
+                <button type="submit" class="btn-primary">Submit</button>
+            </form>
+            <p class="form-toggle">Don't have an account? <a href="#">Sign Up</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

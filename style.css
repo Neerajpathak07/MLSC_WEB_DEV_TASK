@@ -1,0 +1,701 @@
+/* ======== 1. ROOT & THEME VARIABLES ======== */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f0f2f2;
+    --text-primary: #111111;
+    --text-secondary: #555555;
+    --border-color: #dddddd;
+    --amazon-blue: #131921;
+    --amazon-nav-blue: #232F3E;
+    --amazon-orange: #febd69;
+    --link-color: #007185;
+    --error-red: #d9534f;
+    --shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+body.dark-mode {
+    --bg-primary: #1E2A3A;
+    --bg-secondary: #131A22;
+    --text-primary: #f0f2f2;
+    --text-secondary: #cccccc;
+    --border-color: #444444;
+    --link-color: #50b9c9;
+}
+
+/* ======== 2. GENERAL STYLES ======== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ================================================= */
+/* ======== 3. HEADER & NAVBAR (New Version) ======== */
+/* ================================================= */
+
+/* This is now just a container for the two navbars */
+.main-header {
+    width: 100%;
+    /* The two navbars inside will control their own colors */
+}
+
+/* Top Navbar (Main) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap on small screens */
+    gap: 10px;
+    background-color: var(--amazon-blue);
+    color: white;
+    padding: 10px 15px;
+}
+
+/* Helper class for hover borders */
+.nav-link-hover {
+    padding: 8px 5px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+.nav-link-hover:hover {
+    border-color: #ffffff;
+    cursor: pointer;
+}
+
+.nav-logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Location Section */
+.nav-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-icon {
+    font-size: 1.2rem;
+    line-height: 1; /* Aligns icon better */
+}
+
+/* Stacked Text Helper (for Location, Account, Orders) */
+.nav-stacked-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.nav-text-line1 {
+    font-size: 0.75rem;
+    color: #cccccc;
+}
+
+.nav-text-line2 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Search Bar */
+.nav-search {
+    display: flex;
+    flex-grow: 1; /* This is key: it takes up the available space */
+    min-width: 250px; /* Prevents it from getting too small */
+    height: 40px;
+}
+
+.search-dropdown {
+    padding: 0 10px;
+    border: none;
+    background-color: #f3f3f3;
+    color: #333;
+    border-radius: 4px 0 0 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.search-dropdown:hover {
+    background-color: #e6e6e6;
+}
+
+.search-input {
+    width: 100%; /* Takes all available space within .nav-search */
+    padding: 10px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 0; /* Important */
+}
+
+.search-btn {
+    width: 45px;
+    border: none;
+    background-color: var(--amazon-orange);
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+/* Right-hand Tools */
+.nav-tools {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-language {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    color: white;
+}
+
+.nav-account, .nav-orders {
+    color: white; /* Ensures text is white */
+}
+
+.nav-cart {
+    display: flex;
+    align-items: flex-end; /* Aligns "Cart" text with bottom of icon */
+    gap: 5px;
+    color: white;
+}
+
+.nav-cart .cart-icon {
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+/* Theme toggle sits inside nav-tools */
+.theme-switch-wrapper {
+    margin-left: 5px;
+}
+
+/* ==================================== */
+/* NEW: Sub-Navbar (Second Bar)         */
+/* ==================================== */
+.sub-navbar {
+    display: flex;
+    align-items: center;
+    background-color: var(--amazon-nav-blue);
+    color: white;
+    padding: 0 15px;
+    gap: 5px;
+    /* Allows horizontal scrolling on small screens */
+    overflow-x: auto;
+    white-space: nowrap; /* Prevents wrapping of the whole bar */
+}
+
+/* Hide scrollbar for a cleaner look (optional) */
+.sub-navbar::-webkit-scrollbar {
+    height: 0;
+}
+.sub-navbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+
+.sub-navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.sub-nav-link {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 10px 8px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+.sub-nav-link:hover {
+    border-color: #ffffff;
+}
+
+.hamburger-menu {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+}
+
+/* ==================================== */
+/* Responsive Header Adjustments        */
+/* ==================================== */
+@media (max-width: 1100px) {
+    .nav-search {
+        /* On medium screens, move search to its own line */
+        order: 3; /* Flexbox order property */
+        width: 100%;
+        min-width: 100%;
+        margin-top: 10px;
+    }
+    
+    .nav-logo { order: 1; }
+    .nav-tools { order: 2; }
+    .nav-location { order: 1; }
+
+    .navbar {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    /* On small screens, hide less critical items */
+    .nav-location, .nav-language, .nav-orders {
+        display: none;
+    }
+    
+    .nav-tools {
+        /* Make tools fill remaining space next to logo */
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+    
+    .sub-navbar-links {
+        /* Hide text links, leaving only 'All' menu */
+        display: none;
+    }
+}
+
+
+/* ======== 4. HERO SECTION (Updated for new single background image) ======== */
+/* ======== 4. HERO SECTION (Updated for new single background image) ======== */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 280px; 
+    background-color: #87CEEB; /* Fallback color */
+    
+    /* VVVVVVV  THIS IS THE ONLY LINE YOU CHANGE VVVVVVV */
+    
+    background-image: url('./assets/bg3.png'); /* <-- Use your new, blank image */
+    
+    /* ^^^^^^^^^ THIS IS THE ONLY LINE YOU CHANGE ^^^^^^^^^ */
+
+    background-size: cover; 
+    background-position: center center; 
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.hero-content-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1500px; /* Match container width for alignment */
+    height: 100%;
+    display: flex;
+    align-items: center; /* Vertically center the text content */
+    justify-content: space-between;
+    padding: 0 10px; /* Padding for arrows */
+    z-index: 1; /* Ensure content is above background */
+    color: #333; /* Default text color for this section */
+}
+
+.hero-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+    padding-left: 50px; /* Space from the left edge for text */
+    flex-grow: 1; /* Allow text content to take up available space */
+    max-width: 50%; /* Limit width to ensure product image on right is visible */
+    text-shadow: 0 1px 2px rgba(255,255,255,0.3); /* Light shadow for readability */
+}
+
+.hero-text-content .super-value-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333; /* Darker color for emphasis */
+}
+
+.hero-text-content .super-value-text .cart-icon {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.hero-text-content .super-value-text .small-text {
+    font-size: 0.8rem;
+    font-weight: normal;
+    display: block; /* Ensures it goes to the next line */
+    margin-top: -5px; /* Pull it closer to "Super Value Days" */
+    color: #555;
+}
+
+.hero-text-content h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 5px;
+    color: #111; /* Very dark for strong contrast */
+}
+
+.hero-text-content .offers-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.cashback-button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.2s;
+}
+
+.cashback-button:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* Arrows */
+.hero-arrow {
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background for arrows */
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    width: 50px;
+    height: 100px; /* Make arrows taller */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2; /* Ensure arrows are above content */
+    transition: background-color 0.3s;
+}
+
+.hero-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.left-arrow {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.right-arrow {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/* Responsive adjustments for hero section */
+@media (max-width: 900px) {
+    .hero-section {
+        height: 350px; /* Adjust height for smaller screens */
+        background-position: 60% center; /* Shift background a bit to show more of products */
+    }
+
+    .hero-content-wrapper {
+        padding: 0 5px;
+    }
+
+    .hero-text-content {
+        padding-left: 20px;
+        max-width: 60%; /* Allow text to take more space if product is less visible */
+    }
+
+    .hero-text-content .super-value-text {
+        font-size: 1.3rem;
+    }
+    .hero-text-content .super-value-text .cart-icon {
+        font-size: 1.7rem;
+    }
+    .hero-text-content h1 {
+        font-size: 2.8rem;
+    }
+    .hero-text-content .offers-text {
+        font-size: 1rem;
+    }
+
+    .cashback-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .hero-arrow {
+        height: 80px;
+        width: 40px;
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-section {
+        height: 300px;
+        background-position: 70% center; /* Shift background further for mobile */
+    }
+    .hero-content-wrapper {
+        justify-content: center; /* Center content on very small screens */
+    }
+    .hero-text-content {
+        max-width: 80%; /* Allow text to dominate more */
+        align-items: center; /* Center text */
+        text-align: center;
+        padding-left: 0;
+    }
+    .hero-text-content .super-value-text {
+        font-size: 1.1rem;
+        gap: 5px;
+    }
+    .hero-text-content .super-value-text .cart-icon {
+        font-size: 1.5rem;
+    }
+    .hero-text-content h1 {
+        font-size: 2.2rem;
+    }
+    .hero-text-content .offers-text {
+        font-size: 0.9rem;
+    }
+    .hero-arrow {
+        display: none; /* Hide arrows on very small screens if desired */
+    }
+}
+
+
+/* ======== 5. CONTENT GRID (Using CSS Grid) ======== */
+.content-grid {
+    display: grid;
+    /* This grid is responsive by default:
+       - auto-fit: Fit as many columns as possible.
+       - minmax: Each column is at least 300px, but can grow to fill space (1fr).
+    */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--bg-primary);
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.card-item-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.card-item-grid div {
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.card-item-grid img {
+    border-radius: 4px;
+    margin-bottom: 5px;
+    height: 120px; /* Fixed height for alignment */
+    width: 100%;
+}
+
+.card-link {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Specific styling for the "Sign in for your best experience" card */
+.signin-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Adjust as needed */
+    margin-bottom: 15px;
+}
+.signin-card-content .btn-primary {
+    width: 80%; /* Make button wider */
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+
+/* ======== 6. THEME TOGGLE SWITCH ======== */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--amazon-orange);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* ======== 7. LOGIN MODAL & FORM (Using Flexbox) ======== */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: var(--bg-primary);
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-btn {
+    color: var(--text-secondary);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: 500;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.form-group small {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.form-error {
+    color: var(--error-red);
+    font-size: 0.9rem;
+    min-height: 1.2em; /* Prevents layout jump */
+}
+
+.btn-primary {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--amazon-orange);
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.form-toggle {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+}
