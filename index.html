@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone - MLSC Task</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Theme Toggle Button -->
+    <button id="themeToggle" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">amazon.in</span>
+            <div class="d-none d-md-flex align-items-center text-white me-auto ms-3">
+                <i class="fas fa-map-marker-alt me-2"></i>
+                <small>Pune 411051</small>
+            </div>
+            <form class="d-flex mx-auto search-form">
+                <input class="form-control" type="search" placeholder="Search Amazon.in">
+                <button class="btn btn-warning" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <button class="btn btn-outline-light ms-2" data-bs-toggle="modal" data-bs-target="#authModal">
+                Sign in
+            </button>
+        </div>
+    </nav>
+
+    <!-- Category Nav -->
+    <div class="category-nav">
+        <div class="container-fluid">
+            <div class="d-flex gap-3 overflow-auto">
+                <a href="#">All</a>
+                <a href="#">Fresh</a>
+                <a href="#">Mobiles</a>
+                <a href="#">Fashion</a>
+                <a href="#">Electronics</a>
+                <a href="#">Home</a>
+                <a href="#">Books</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Carousel -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="images\massageFinal.png" class="d-block w-100" alt="Massage Gun"" class="d-block w-100" alt="Massage Gun">
+            <div class="carousel-caption">
+                <h1>Starting ₹799</h1>
+                <p>Gun massager</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="images\electronics.png" class="d-block w-100" alt="Electronics Sale">
+            <div class="carousel-caption">
+                <h1>Up to 50% off</h1>
+                <p>Electronics Sale</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="images\fashion.png" class="d-block w-100" alt="Fashion Collection">
+            <div class="carousel-caption">
+                <h1>New Arrivals</h1>
+                <p>Fashion Collection</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+    <!-- Product Grid -->
+    <div class="container-fluid py-4">
+        <div class="row g-3">
+            
+            <!-- Card 1 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="product-card">
+                    <h5>Revamp your home in style</h5>
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <img src="images\cushion.jpeg" class="img-fluid rounded">
+                            <small class="d-block mt-1">Cushion covers</small>
+                        </div>
+                        <div class="col-6">
+                            <img src="images\vase.jpeg" class="img-fluid rounded">
+                            <small class="d-block mt-1">Figurines & vases</small>
+                        </div>
+                        <div class="col-6">
+                            <img src="images\storage.jpeg" class="img-fluid rounded">
+                            <small class="d-block mt-1">Home storage</small>
+                        </div>
+                        <div class="col-6">
+                            <img src="images\light.jpeg" class="img-fluid rounded">
+                            <small class="d-block mt-1">Lighting solutions</small>
+                        </div>
+                    </div>
+                    <a href="#" class="explore-link">Explore all</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="product-card">
+                    <h5>Appliances | Up to 55% off</h5>
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <img src="images\ac.jpeg" class="img-fluid rounded">
+                            <small class="d-block mt-1">Air conditioners</small>
+                        </div>
+                        <div class="col-6">
+                            <img src="images\fridge.jpeg" class="img-fluid rounded">
+                            <small class="d-block mt-1">Refrigerators</small>
+                        </div>
+                        <div class="col-6">
+                            <img src="images\oven.jpeg" class="img-fluid rounded">
+                            <small class="d-block mt-1">Microwaves</small>
+                        </div>
+                        <div class="col-6">
+                            <img src="images\washing.jpeg" class="img-fluid rounded">
+                            <small class="d-block mt-1">Washing machines</small>
+                        </div>
+                    </div>
+                    <a href="#" class="explore-link">See more</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="product-card">
+                    <h5>Starting ₹149 | Headphones</h5>
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <img src="images\boat.jpeg" class="img-fluid rounded">
+                            <small class="d-block mt-1">Starting ₹249 | boAt</small>
+                        </div>
+                        <div class="col-6">
+                            <img src="images\boult.jpeg" class="img-fluid rounded">
+                            <small class="d-block mt-1">Starting ₹349 | boult</small>
+                        </div>
+                        <div class="col-6">
+                            <img src="images\noise.jpeg" class="img-fluid rounded">
+                            <small class="d-block mt-1">Starting ₹649 | Noise</small>
+                        </div>
+                        <div class="col-6">
+                            <img src="images\zeb.jpeg" class="img-fluid rounded">
+                            <small class="d-block mt-1">Starting ₹149 | Zebronics</small>
+                        </div>
+                    </div>
+                    <a href="#" class="explore-link">See all offers</a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="product-card">
+                    <h5>Under ₹499 | Home essentials</h5>
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <img src="images\clean.jpeg" class="img-fluid rounded">
+                            <small class="d-block mt-1">Under ₹199 | Cleaning</small>
+                        </div>
+                        <div class="col-6">
+                            <img src="images\bath.jpeg" class="img-fluid rounded">
+                            <small class="d-block mt-1">Under ₹399 | Bathroom</small>
+                        </div>
+                        <div class="col-6">
+                            <img src="images\homt.jpeg" class="img-fluid rounded">
+                            <small class="d-block mt-1">Under ₹499 | Home tools</small>
+                        </div>
+                        <div class="col-6">
+                            <img src="images\wallpaper.jpeg" class="img-fluid rounded">
+                            <small class="d-block mt-1">Under ₹299 | Wallpapers</small>
+                        </div>
+                    </div>
+                    <a href="#" class="explore-link">Explore all</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-1">Back to top</p>
+        <p class="mb-0">&copy; 2025 Amazon Clone | Nikhil Shah (MLSC Event Coord)</p>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Sign In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="authForm" novalidate>
+                        
+                        <!-- Name field (hidden by default) -->
+                        <div class="mb-3" id="nameGroup" style="display: none;">
+                            <label for="name" class="form-label">Your name</label>
+                            <input type="text" class="form-control" id="name" placeholder="First and last name">
+                            <div class="invalid-feedback" id="nameError"></div>
+                        </div>
+
+                        <!-- Email field -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                            <div class="invalid-feedback" id="emailError"></div>
+                        </div>
+
+                        <!-- Password field -->
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="At least 6 characters" required>
+                            <div class="invalid-feedback" id="passwordError"></div>
+                        </div>
+
+                        <!-- Confirm password field (hidden by default) -->
+                        <div class="mb-3" id="confirmGroup" style="display: none;">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Enter password again">
+                            <div class="invalid-feedback" id="confirmError"></div>
+                        </div>
+
+                        <button type="submit" class="btn btn-warning w-100">Continue</button>
+                    </form>
+
+                    <div class="text-center my-3">
+                        <small class="text-muted">New to Amazon?</small>
+                    </div>
+
+                    <button type="button" class="btn btn-outline-secondary w-100" id="toggleForm">
+                        Create your account
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
