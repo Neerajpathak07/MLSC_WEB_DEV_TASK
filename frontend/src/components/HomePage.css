@@ -1,0 +1,263 @@
+/* General Body & Main Container */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #E3E6E6;
+}
+
+.homepage-container {
+  width: 100%;
+}
+
+.homepage-main-content {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 20px;
+  /* Position relative to allow grid to sit on top of hero gradient */
+  position: relative;
+  top: -300px; /* Pulls the grid up over the hero banner */
+  margin-bottom: -300px; /* Counteracts the negative top margin */
+}
+
+/* --- Navbar Main --- */
+.navbar-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #131921;
+  color: white;
+  padding: 8px 15px;
+  position: relative; /* Added for z-index context */
+  z-index: 100; /* Ensures navbar is on top */
+}
+.nav-left, .nav-right, .nav-search {
+  display: flex;
+  align-items: center;
+}
+.nav-logo {
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid transparent;
+  padding: 5px;
+}
+.nav-location {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid transparent;
+}
+.nav-text-small {
+  font-size: 12px;
+  color: #CCC;
+}
+.nav-text-bold {
+  font-size: 14px;
+  font-weight: bold;
+}
+.nav-search {
+  flex-grow: 1;
+  margin: 0 15px;
+}
+.nav-search-dropdown {
+  padding: 10px;
+  background-color: #F3F3F3;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 12px;
+}
+.nav-search-input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  font-size: 14px;
+}
+.nav-search-button {
+  padding: 10px 12px;
+  background-color: #FEBD69;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin: 0 5px;
+  border: 1px solid transparent;
+}
+.nav-cart {
+  display: flex;
+  align-items: flex-end;
+  font-size: 20px;
+  padding: 5px;
+  border: 1px solid transparent;
+}
+.nav-cart .nav-text-bold {
+  margin-left: 5px;
+  font-size: 14px;
+}
+/* Simple hover for interactivity */
+.nav-logo:hover, .nav-location:hover, .nav-link:hover, .nav-cart:hover {
+  border-color: white;
+  cursor: pointer;
+}
+
+/* --- Navbar Sub --- */
+.navbar-sub {
+  background-color: #232F3E;
+  color: white;
+  padding: 8px 15px;
+  position: relative; /* Added for z-index context */
+  z-index: 99; /* Below main nav but above content */
+}
+.navbar-sub ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.navbar-sub li {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: 1px solid transparent;
+}
+.navbar-sub li:hover {
+  border-color: white;
+  cursor: pointer;
+}
+
+/* --- Hero Banner --- */
+.hero-banner {
+  width: 100%;
+  /* Using a gradient to approximate the background */
+  background: linear-gradient(to bottom, transparent 30%, #E3E6E6 100%), 
+              url('https://via.placeholder.com/1500x600?text=Hero+Background+Image') no-repeat center center;
+  background-size: cover;
+  min-height: 600px; /* Height of the banner area */
+  position: relative;
+  /* Mask to create the fade-out effect at the bottom */
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  max-width: 1460px;
+  margin: 0 auto;
+}
+.hero-text h1 {
+  font-size: 48px;
+  margin: 0;
+}
+.hero-text h2 {
+  font-size: 28px;
+  margin: 0 0 10px 0;
+}
+.hero-brands {
+  font-size: 20px;
+  font-weight: bold;
+}
+.hero-image img {
+  width: 350px;
+  height: auto;
+}
+.hero-offer-banner {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  background-color: white;
+  padding: 10px;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+/* --- Product Grid --- */
+.product-grid-container {
+  display: grid;
+  /* Creates a responsive 4-column grid */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.product-card {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10; /* Ensures cards are above the hero banner's faded part */
+}
+
+.product-card h3 {
+  font-size: 21px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  flex-grow: 1; /* Makes the grid take available space */
+}
+
+.grid-item {
+  width: 100%;
+}
+
+.grid-item a {
+  text-decoration: none;
+  color: #0F1111;
+}
+
+.grid-item-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: #0F1111;
+}
+
+.image-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f3f3;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+.grid-item-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover .grid-item-image {
+  transform: scale(1.05);
+}
+
+.grid-item-label {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.card-footer-link {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #007185;
+  text-decoration: none;
+}
+
+.card-footer-link:hover {
+  text-decoration: underline;
+}
