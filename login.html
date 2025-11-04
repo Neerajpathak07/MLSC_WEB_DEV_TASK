@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon - Sign in</title>
+    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle-wrapper">
+        <div class="theme-toggle">
+            <i class="fas fa-sun"></i>
+            <label class="switch">
+                <input type="checkbox" id="themeSwitch">
+                <span class="slider"></span>
+            </label>
+            <i class="fas fa-moon"></i>
+        </div>
+    </div>
+
+    <div class="auth-container">
+        <!-- Amazon Logo -->
+        <div class="auth-logo">
+            <i class="fab fa-amazon"></i>
+            <span>amazon.in</span>
+        </div>
+
+        <!-- Login Form -->
+        <div id="loginFormContainer" class="auth-card active">
+            <h1>Sign in</h1>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email or mobile phone number</label>
+                    <input type="text" id="loginEmail" name="email" required autofocus>
+                    <span class="error-message" id="loginEmailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" name="password" required minlength="6">
+                    <span class="error-message" id="loginPasswordError"></span>
+                </div>
+                <button type="submit" class="btn-primary">Continue</button>
+                <p class="form-text">
+                    By continuing, you agree to Amazon's 
+                    <a href="#">Conditions of Use</a> and 
+                    <a href="#">Privacy Notice</a>.
+                </p>
+                <a href="#" class="forgot-password">Forgot your password?</a>
+            </form>
+            
+            <div class="form-divider">
+                <span>New to Amazon?</span>
+            </div>
+            
+            <button class="btn-secondary" id="showSignup">Create your Amazon account</button>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signupFormContainer" class="auth-card">
+            <h1>Create account</h1>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Your name</label>
+                    <input type="text" id="signupName" name="name" required minlength="2">
+                    <span class="error-message" id="signupNameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Mobile number or email</label>
+                    <input type="text" id="signupEmail" name="email" required>
+                    <span class="error-message" id="signupEmailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" name="password" required minlength="6">
+                    <small>Passwords must be at least 6 characters.</small>
+                    <span class="error-message" id="signupPasswordError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="signupConfirmPassword">Re-enter password</label>
+                    <input type="password" id="signupConfirmPassword" name="confirmPassword" required>
+                    <span class="error-message" id="signupConfirmPasswordError"></span>
+                </div>
+                <button type="submit" class="btn-primary">Create your Amazon account</button>
+                <p class="form-text">
+                    By creating an account, you agree to Amazon's 
+                    <a href="#">Conditions of Use</a> and 
+                    <a href="#">Privacy Notice</a>.
+                </p>
+            </form>
+            
+            <div class="form-divider">
+                <span>Already have an account?</span>
+            </div>
+            
+            <button class="btn-secondary" id="showLogin">Sign in</button>
+        </div>
+
+        <!-- Footer -->
+        <div class="auth-footer">
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <a href="#">Conditions of Use</a>
+                <a href="#">Privacy Notice</a>
+                <a href="#">Help</a>
+            </div>
+            <p class="copyright">&copy; 1996-2024, Amazon.com, Inc. or its affiliates</p>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>
