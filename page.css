@@ -1,0 +1,369 @@
+:root {
+    --amazon-blue-light: #232f3e;
+    --amazon-blue-dark: #131921;
+    --amazon-yellow: #f3a847;
+    --amazon-orange: #ff9900;
+    --text-white: #ffffff;
+    --text-light: #ccc;
+    --link-blue: #007185;
+    --card-bg: #ffffff;
+    --main-bg: #eaeded;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--main-bg);
+    min-width: 1000px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-blue);
+}
+
+
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-belt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--amazon-blue-dark);
+    color: var(--text-white);
+    height: 60px;
+    padding: 0 10px;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    margin-right: 5px;
+    height: 50px;
+}
+.logo-placeholder {
+    background-color: transparent;
+    color: var(--text-white);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    max-width: 100px;
+}
+.nav-logo:hover .logo-placeholder {
+    border: 1px solid var(--text-white);
+}
+
+
+.nav-location {
+    display: flex;
+    align-items: flex-end;
+    padding: 5px 8px;
+    height: 50px;
+}
+.nav-location i {
+    margin-right: 4px;
+    font-size: 18px;
+}
+.nav-location > div {
+    display: flex;
+    flex-direction: column;
+}
+.nav-line-1 {
+    font-size: 12px;
+    color: var(--text-light);
+}
+.nav-line-2 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nav-tool {
+    padding: 10px 8px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.nav-tool.account {
+    flex-direction: column;
+}
+.nav-tool:hover {
+    border: 1px solid var(--text-white);
+}
+
+.nav-tool.cart {
+    flex-direction: row;
+    padding: 0 8px;
+}
+.nav-tool.cart i {
+    font-size: 30px;
+    margin-right: 5px;
+}
+.nav-tool.cart .nav-line-2 {
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+.nav-search {
+    flex-grow: 1;
+    display: flex;
+    margin: 0 15px;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 40px;
+    max-width: 800px;
+}
+.nav-search:focus-within {
+    box-shadow: 0 0 0 3px var(--amazon-orange);
+}
+
+.nav-search-dropdown {
+    background-color: var(--text-light);
+    color: #555;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #ddd;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.nav-search-input {
+    flex-grow: 1;
+    border: none;
+    padding: 5px 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+.nav-search-icon {
+    width: 45px;
+    background-color: var(--amazon-yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #131921;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.nav-main {
+    background-color: var(--amazon-blue-light);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.nav-item {
+    color: var(--text-white);
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    margin-right: 5px;
+}
+
+.nav-item:hover {
+    border: 1px solid var(--text-white);
+}
+
+.nav-item.all i {
+    margin-right: 5px;
+}
+
+
+.hero-section {
+    position: relative;
+    padding-bottom: 30px;
+    background: #fff;
+    width: 100%;
+}
+
+.hero-image-container {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--text-white);
+    border: none;
+    padding: 15px 12px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 50;
+    transition: background 0.3s;
+}
+.slider-arrow:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+.slider-arrow.left { left: 0; border-radius: 0 5px 5px 0; }
+.slider-arrow.right { right: 0; border-radius: 5px 0 0 5px; }
+
+.hero-content {
+    display: none;
+}
+
+.hero-image-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images-eu.ssl-images-amazon.com/images/G/31/img23/Softlines_JWL_SH_GW_Assets/2024/BAU_BTF/Nov/Unrec/Shoes/1/30003._CB542120021_.jpg') center/cover no-repeat;
+    border-radius: 0;
+}
+
+.hero-image-placeholder.hero-image-2 {
+    background: url('https://images-eu.ssl-images-amazon.com/images/G/31/INSLGW/af_pc_2x._CB792409181_.jpg') center/cover no-repeat;
+}
+
+.hero-image-placeholder.hero-image-3 {
+    background: url('https://images-eu.ssl-images-amazon.com/images/G/31/Img25/Consumables/Grocery/SVD/Nov/SVD_PC_Hero_01_3000x1200._CB779402117_.jpg') center/cover no-repeat;
+}
+
+
+.product-grid-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1500px;
+    padding: 0 20px;
+    margin: -250px auto 40px auto;
+    position: relative;
+    z-index: 20;
+}
+
+.product-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.product-card h2 {
+    font-size: 21px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.card-grid {
+    display: grid;
+    margin-bottom: 20px;
+}
+
+.card-grid.four-items {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.grid-item {
+    text-align: left;
+}
+
+.grid-item p {
+    font-size: 12px;
+    color: #0f1111;
+    margin-top: 5px;
+}
+
+.item-img {
+    width: 100%;
+    height: 100px;
+    background-color: var(--main-bg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 3px;
+    min-height: 100px;
+}
+
+.img-1 { background-image: url('https://tse4.mm.bing.net/th/id/OIP.QSOsRvAxZ-4aHCxNJ7yrFQHaHa?pid=Api&P=0&h=180'); }
+.img-2 { background-image: url('https://tse2.mm.bing.net/th/id/OIP.VTbPJas1KsGdMIcPCxaA7gHaKi?pid=Api&P=0&h=180'); }
+.img-3 { background-image: url('https://i5.walmartimages.com/seo/NeatFreak-NFC07118-A69A8A-001-3-Tier-Mega-Home-Storage-Organizer-with-11-Bin-Drawers_8abe05c2-80e2-4807-a599-68f82ceb5a93_1.c750d2919de5db587bec6344d9873143.jpeg'); }
+.img-4 { background-image: url('https://tse3.mm.bing.net/th/id/OIP.IZ2uSqhrU0WVJU7m6lu3QQHaFj?pid=Api&P=0&h=180'); }
+.img-5 { background-image: url('https://tse4.mm.bing.net/th/id/OIP.Afnl0MSy3p9jtKv33uRQuwHaE8?pid=Api&P=0&h=180'); }
+.img-6 { background-image: url('https://www.pngitem.com/pimgs/m/248-2484929_refrigerator-open-door-hd-png-download.png'); }
+.img-7 { background-image: url('https://tse2.mm.bing.net/th/id/OIP.1n1Yn-_N5fROjUGOigySzQHaFI?pid=Api&P=0&h=180'); }
+.img-8 { background-image: url('https://tse2.mm.bing.net/th/id/OIP.sZvDaHPXEUS5jzPPFPLWTAHaKM?pid=Api&P=0&h=180'); }
+.img-9 { background-image: url('https://tse2.mm.bing.net/th/id/OIP.zJjpHF68MaZF8iZbXc1powHaHa?pid=Api&P=0&h=180'); }
+.img-10 { background-image: url('https://tse4.mm.bing.net/th/id/OIP.TT9p5XWr-2nRJJCFxqliAwHaHa?pid=Api&P=0&h=180'); }
+.img-11 { background-image: url('https://tse4.mm.bing.net/th/id/OIP.U13Je5WhupmKJu5vLJqn_QHaHP?pid=Api&P=0&h=180'); }
+.img-12 { background-image: url('https://tse4.mm.bing.net/th/id/OIP.A0yLq7wRP698QNIYFi3JzQHaFj?pid=Api&P=0&h=180'); }
+
+
+.card-narrow .card-grid.six-items {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 15px 10px;
+}
+
+.brand-logo {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.logo-boat { background-image: url('https://cdn.shopify.com/s/files/1/0057/8938/4802/products/product-Image.png?v=1625813323'); background-size: contain; background-repeat: no-repeat; background-position: center; }
+.logo-boult { background-image: url('https://m.media-amazon.com/images/I/61ev0qhPNAL._AC_.jpg'); background-size: contain; background-repeat: no-repeat; background-position: center; }
+.logo-noise { background-image: url('https://static.toiimg.com/thumb/resizemode-4,msid-80374595,imgsize-32950,width-720/80374595.jpg'); background-size: contain; background-repeat: no-repeat; background-position: center; }
+.logo-zebronics { background-image: url('https://img-prd-pim.poorvika.com/product/Zebronics-Zeb-Sound-Feast-400-Bluetooth-Speaker-1.png'); background-size: contain; background-repeat: no-repeat; background-position: center; }
+
+.explore-link {
+    font-size: 13px;
+    display: block;
+    margin-top: 15px;
+    color: var(--link-blue);
+}
+.explore-link:hover {
+    color: var(--amazon-orange);
+    text-decoration: underline;
+}
+
+.footer-placeholder {
+    background-color: var(--amazon-blue-light);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.footer-placeholder a {
+    color: var(--text-white);
+    font-size: 13px;
+    padding: 10px 0;
+}
