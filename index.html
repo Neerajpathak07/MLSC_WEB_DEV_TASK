@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopHub - Your Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <h1>ShopHub</h1>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search products...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="header-actions">
+                    <div class="theme-toggle">
+                        <input type="checkbox" id="theme-switch">
+                        <label for="theme-switch" class="switch">
+                            <span class="slider"></span>
+                        </label>
+                        <span class="theme-label">🌙</span>
+                    </div>
+                    <button class="auth-btn" id="loginBtn">Sign In</button>
+                    <div class="cart">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#electronics">Electronics</a></li>
+                    <li><a href="#fashion">Fashion</a></li>
+                    <li><a href="#books">Books</a></li>
+                    <li><a href="#deals">Today's Deals</a></li>
+                    <li><a href="#customer-service">Customer Service</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Starting ₹799</h2>
+                <h3>Premium Products</h3>
+                <p>Discover amazing deals on quality products</p>
+                <button class="cta-btn">Shop Now</button>
+            </div>
+            <div class="hero-image">
+                <div class="product-showcase">
+                    <div class="product-item">📱</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="categories">
+        <div class="container">
+            <div class="category-grid">
+                <div class="category-card">
+                    <h3>Revamp your home in style</h3>
+                    <div class="category-items">
+                        <div class="item">
+                            <div class="item-image">🛏️</div>
+                            <p>Cushion covers, bedsheets & more</p>
+                        </div>
+                        <div class="item">
+                            <div class="item-image">🏺</div>
+                            <p>Figurines, vases & more</p>
+                        </div>
+                        <div class="item">
+                            <div class="item-image">📦</div>
+                            <p>Home storage</p>
+                        </div>
+                        <div class="item">
+                            <div class="item-image">💡</div>
+                            <p>Lighting solutions</p>
+                        </div>
+                    </div>
+                    <a href="#" class="explore-link">Explore all</a>
+                </div>
+
+                <div class="category-card">
+                    <h3>Appliances for your home | Up to 55% off</h3>
+                    <div class="category-items">
+                        <div class="item">
+                            <div class="item-image">❄️</div>
+                            <p>Air conditioners</p>
+                        </div>
+                        <div class="item">
+                            <div class="item-image">🔥</div>
+                            <p>Refrigerators</p>
+                        </div>
+                        <div class="item">
+                            <div class="item-image">📺</div>
+                            <p>Microwaves</p>
+                        </div>
+                        <div class="item">
+                            <div class="item-image">🌊</div>
+                            <p>Washing machines</p>
+                        </div>
+                    </div>
+                    <a href="#" class="explore-link">See more</a>
+                </div>
+
+                <div class="category-card">
+                    <h3>Starting ₹149 | Headphones</h3>
+                    <div class="category-items">
+                        <div class="item">
+                            <div class="item-image">🎧</div>
+                            <p>Starting ₹249 | boAt</p>
+                        </div>
+                        <div class="item">
+                            <div class="item-image">🎵</div>
+                            <p>Starting ₹149 | boult</p>
+                        </div>
+                        <div class="item">
+                            <div class="item-image">🔊</div>
+                            <p>Starting ₹649 | Noise</p>
+                        </div>
+                        <div class="item">
+                            <div class="item-image">🎶</div>
+                            <p>Starting ₹149 | Zebronics</p>
+                        </div>
+                    </div>
+                    <a href="#" class="explore-link">See all offers</a>
+                </div>
+
+                <div class="category-card">
+                    <h3>Under ₹499 | Deals on home improvement essentials</h3>
+                    <div class="category-items">
+                        <div class="item">
+                            <div class="item-image">🧽</div>
+                            <p>Under ₹199 | Cleaning supplies</p>
+                        </div>
+                        <div class="item">
+                            <div class="item-image">🚿</div>
+                            <p>Under ₹599 | Bathroom accessories</p>
+                        </div>
+                        <div class="item">
+                            <div class="item-image">🔧</div>
+                            <p>Under ₹499 | Home tools</p>
+                        </div>
+                        <div class="item">
+                            <div class="item-image">🎨</div>
+                            <p>Under ₹299 | Wallpapers</p>
+                        </div>
+                    </div>
+                    <a href="#" class="explore-link">Explore all</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Auth Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="auth-container">
+                <div class="auth-tabs">
+                    <button class="tab-btn active" data-tab="login">Login</button>
+                    <button class="tab-btn" data-tab="signup">Sign Up</button>
+                </div>
+
+                <!-- Login Form -->
+                <form id="loginForm" class="auth-form active">
+                    <h2>Welcome Back</h2>
+                    <div class="form-group">
+                        <input type="email" id="loginEmail" required>
+                        <label for="loginEmail">Email</label>
+                        <span class="error-message" id="loginEmailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="loginPassword" required>
+                        <label for="loginPassword">Password</label>
+                        <span class="error-message" id="loginPasswordError"></span>
+                    </div>
+                    <button type="submit" class="submit-btn">Sign In</button>
+                    <p class="auth-switch">Don't have an account? <span class="switch-link" data-tab="signup">Sign
+                            up</span></p>
+                </form>
+
+                <!-- Signup Form -->
+                <form id="signupForm" class="auth-form">
+                    <h2>Create Account</h2>
+                    <div class="form-group">
+                        <input type="text" id="signupName" required>
+                        <label for="signupName">Full Name</label>
+                        <span class="error-message" id="signupNameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="signupEmail" required>
+                        <label for="signupEmail">Email</label>
+                        <span class="error-message" id="signupEmailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="signupPassword" required>
+                        <label for="signupPassword">Password</label>
+                        <span class="error-message" id="signupPasswordError"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="confirmPassword" required>
+                        <label for="confirmPassword">Confirm Password</label>
+                        <span class="error-message" id="confirmPasswordError"></span>
+                    </div>
+                    <button type="submit" class="submit-btn">Create Account</button>
+                    <p class="auth-switch">Already have an account? <span class="switch-link" data-tab="login">Sign
+                            in</span></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
