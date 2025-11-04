@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon.in - Online Shopping India</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-top">
+            <div class="logo">
+                <i class="fab fa-amazon"></i>
+                <span>amazon.in</span>
+            </div>
+            
+            <div class="delivery-info">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <span class="small-text">Delivering to Mumbai 400001</span>
+                    <span class="bold-text">Update location</span>
+                </div>
+            </div>
+
+            <div class="search-bar">
+                <select class="search-category">
+                    <option>All</option>
+                    <option>Electronics</option>
+                    <option>Fashion</option>
+                    <option>Books</option>
+                    <option>Home & Kitchen</option>
+                </select>
+                <input type="text" placeholder="Search Amazon.in">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <div class="header-actions">
+                <div class="language-selector">
+                    <img src="https://flagcdn.com/w20/in.png" alt="India" class="flag-icon">
+                    <span>EN</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+
+                <div class="account-info">
+                    <span class="small-text">Hello, <span id="userName">User</span></span>
+                    <span class="bold-text">Account & Lists <i class="fas fa-caret-down"></i></span>
+                    <button class="logout-btn" id="logoutBtn" title="Sign out">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+
+                <div class="returns">
+                    <span class="small-text">Returns</span>
+                    <span class="bold-text">& Orders</span>
+                </div>
+
+                <div class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                    <span>Cart</span>
+                </div>
+            </div>
+        </div>
+
+        <nav class="header-nav">
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i> All
+            </button>
+            <a href="#">Fresh</a>
+            <a href="#">MX Player</a>
+            <a href="#">Sell</a>
+            <a href="#">Bestsellers</a>
+            <a href="#">Today's Deals</a>
+            <a href="#">Mobiles</a>
+            <a href="#">New Releases</a>
+            <a href="#">Electronics</a>
+            <a href="#">Customer Service</a>
+            <a href="#">Prime</a>
+            <a href="#">Home & Kitchen</a>
+            <a href="#">Fashion</a>
+            <a href="#">Amazon Pay</a>
+            <a href="#">Books</a>
+            <a href="#">Computers</a>
+            <a href="#">Home Improvement</a>
+            <a href="#">Beauty & Personal Care</a>
+            
+            <!-- Theme Toggle -->
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="themeSwitch">
+                    <span class="slider"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Starting ₹799</h1>
+                <h2>Gun massager</h2>
+                <div class="hero-brands">
+                    <span class="brand">Lifelong</span>
+                    <span class="brand">cult</span>
+                </div>
+                <div class="hero-offer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/ICICI_Bank_Logo.svg/200px-ICICI_Bank_Logo.svg.png" alt="ICICI" style="width: 60px; height: auto;">
+                    <div>
+                        <strong>Extra 5% unlimited cashback*</strong>
+                        <p>with Amazon Pay ICICI Bank credit card</p>
+                        <small>*T&C apply</small>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&h=400&fit=crop" alt="Massage Gun" onerror="this.src='https://images.pexels.com/photos/6111616/pexels-photo-6111616.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop'">
+            </div>
+        </div>
+        <button class="hero-prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="hero-next"><i class="fas fa-chevron-right"></i></button>
+    </section>
+
+    <!-- Product Categories Section -->
+    <main class="product-grid">
+        <!-- Revamp your home in style -->
+        <div class="product-card">
+            <h3>Revamp your home in style</h3>
+            <div class="product-items">
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=300&h=300&fit=crop" alt="Cushion covers" onerror="this.src='https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'">
+                    <p>Cushion covers, bedsheets & more</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=300&h=300&fit=crop" alt="Figurines" onerror="this.src='https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'">
+                    <p>Figurines, vases & more</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=300&h=300&fit=crop" alt="Home storage" onerror="this.src='https://images.pexels.com/photos/4107278/pexels-photo-4107278.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'">
+                    <p>Home storage</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=300&h=300&fit=crop" alt="Lighting" onerror="this.src='https://images.pexels.com/photos/1112598/pexels-photo-1112598.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'">
+                    <p>Lighting solutions</p>
+                </div>
+            </div>
+            <a href="#" class="explore-link">Explore all</a>
+        </div>
+
+        <!-- Appliances for your home -->
+        <div class="product-card">
+            <h3>Appliances for your home | Up to 55% off</h3>
+            <div class="product-items">
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1631545804983-59bfbf261111?w=300&h=300&fit=crop" alt="Air conditioners" onerror="this.src='https://images.pexels.com/photos/4022092/pexels-photo-4022092.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'">
+                    <p>Air conditioners</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300&h=300&fit=crop" alt="Refrigerators" onerror="this.src='https://images.pexels.com/photos/2343467/pexels-photo-2343467.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'">
+                    <p>Refrigerators</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1585659722983-3a675dabf23d?w=300&h=300&fit=crop" alt="Microwaves" onerror="this.src='https://images.pexels.com/photos/7936008/pexels-photo-7936008.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'">
+                    <p>Microwaves</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=300&h=300&fit=crop" alt="Washing machines" onerror="this.src='https://images.pexels.com/photos/5591581/pexels-photo-5591581.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'">
+                    <p>Washing machines</p>
+                </div>
+            </div>
+            <a href="#" class="explore-link">See more</a>
+        </div>
+
+        <!-- Starting ₹149 | Headphones -->
+        <div class="product-card">
+            <h3>Starting ₹149 | Headphones</h3>
+            <div class="product-items">
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=300&h=300&fit=crop" alt="boAt" onerror="this.src='https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'">
+                    <p>Starting ₹249 | boAt</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=300&h=300&fit=crop" alt="boult" onerror="this.src='https://images.pexels.com/photos/8000619/pexels-photo-8000619.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'">
+                    <p>Starting ₹349 | boult</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1613040809024-b4ef7ba99bc3?w=300&h=300&fit=crop" alt="Noise" onerror="this.src='https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'">
+                    <p>Starting ₹649 | Noise</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300&h=300&fit=crop" alt="Zebronics" onerror="this.src='https://images.pexels.com/photos/3587478/pexels-photo-3587478.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'">
+                    <p>Starting ₹149 | Zebronics</p>
+                </div>
+            </div>
+            <a href="#" class="explore-link">See all offers</a>
+        </div>
+
+        <!-- Under ₹499 | Deals on home improvement -->
+        <div class="product-card">
+            <h3>Under ₹499 | Deals on home improvement essentials</h3>
+            <div class="product-items">
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=300&h=300&fit=crop" alt="Cleaning supplies" onerror="this.src='https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'">
+                    <p>Under ₹199 | Cleaning supplies</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=300&h=300&fit=crop" alt="Bathroom accessories" onerror="this.src='https://images.pexels.com/photos/6489095/pexels-photo-6489095.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'">
+                    <p>Under ₹399 | Bathroom accessories</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1581783898377-1c85bf937427?w=300&h=300&fit=crop" alt="Home tools" onerror="this.src='https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'">
+                    <p>Under ₹499 | Home tools</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1615875474908-f403116f5386?w=300&h=300&fit=crop" alt="Wallpapers" onerror="this.src='https://images.pexels.com/photos/6969862/pexels-photo-6969862.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'">
+                    <p>Under ₹299 | Wallpapers</p>
+                </div>
+            </div>
+            <a href="#" class="explore-link">Explore all</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-back-to-top">
+            <a href="#top">Back to top</a>
+        </div>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Get to Know Us</h4>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Press Releases</a>
+                <a href="#">Amazon Science</a>
+            </div>
+            <div class="footer-column">
+                <h4>Connect with Us</h4>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+            <div class="footer-column">
+                <h4>Make Money with Us</h4>
+                <a href="#">Sell on Amazon</a>
+                <a href="#">Sell under Amazon Accelerator</a>
+                <a href="#">Become an Affiliate</a>
+                <a href="#">Advertise Your Products</a>
+            </div>
+            <div class="footer-column">
+                <h4>Let Us Help You</h4>
+                <a href="#">COVID-19 and Amazon</a>
+                <a href="#">Your Account</a>
+                <a href="#">Returns Centre</a>
+                <a href="#">Help</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-logo">
+                <i class="fab fa-amazon"></i> amazon.in
+            </div>
+            <p>&copy; 2024 Amazon.in. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
