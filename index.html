@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon-Style Landing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HEADER 1 -->
+  <header class="top-header">
+    <div class="logo">Amazon<span>.in</span></div>
+
+    <div class="search-bar">
+      <select>
+        <option>All</option>
+        <option>Mobiles</option>
+        <option>Electronics</option>
+      </select>
+      <input type="text" placeholder="Search Amazon.in" />
+      <button class="search-btn">🔍</button>
+    </div>
+
+    <div class="header-actions">
+      <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
+      <button id="login-btn" onclick="location.href='login.html'">Login</button>
+      <div class="cart">
+        🛒<span id="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HEADER 2 -->
+  <nav class="sub-header">
+    <ul>
+      <li>☰ All</li>
+      <li>Fresh</li>
+      <li>MX Player</li>
+      <li>Sell</li>
+      <li>Bestsellers</li>
+      <li>Today's Deals</li>
+      <li>Mobiles</li>
+      <li>Electronics</li>
+      <li>Prime</li>
+      <li>Home & Kitchen</li>
+      <li>Fashion</li>
+      <li>Books</li>
+    </ul>
+  </nav>
+
+  <!-- SLIDER -->
+  <section class="slider">
+    <button class="arrow left">‹</button>
+    <div class="slides">
+      <div class="slide active">
+        <img src="images/CERAMICS.jpeg" alt="Ceramics" />
+        <div class="caption">
+          <h2>Starting ₹499</h2>
+          <p>Ceramics</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="images/HEADPHONES.jpeg" alt="Headphones" />
+        <div class="caption">
+          <h2>Starting ₹149</h2>
+          <p>Headphones</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="images/HOMEAPPLIANCES.jpeg" alt="Home appliances" />
+        <div class="caption">
+          <h2>Appliances for your home</h2>
+          <p>Up to 55% off</p>
+        </div>
+      </div>
+    </div>
+    <button class="arrow right">›</button>
+  </section>
+
+  <!-- PRODUCT CARDS -->
+  <section class="cards">
+    <div class="card">
+      <h3>Revamp your home in style</h3>
+      <img src="images/img1.jpeg" alt="Home" />
+    </div>
+    <div class="card">
+      <h3>Appliances for your home | Up to 55% off</h3>
+      <img src="images/img2.jpeg" alt="Appliances" />
+    </div>
+    <div class="card">
+      <h3>Starting ₹149 | Headphones</h3>
+      <img src="images/HEADPHONES.jpeg" alt="Headphones" />
+    </div>
+    <div class="card">
+      <h3>Under ₹499 | Home improvement essentials</h3>
+      <img src="images/img3.jpeg" alt="Home tools" />
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login / Sign Up</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Inter, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    body {
+  background-color: #F7A5A5; 
+}
+button {
+  background-color: #E06B80; 
+  color: #fff;
+}
+
+button:hover {
+  background-color: #E06B80;
+}
+
+    .auth-container {
+      width: 350px;
+      background: var(--card);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    button {
+      padding: 10px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+    .switch {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .switch a {
+      color: var(--accent);
+      cursor: pointer;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-container">
+    <h2 id="form-title">Login</h2>
+    <form id="auth-form">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+    <div class="switch">
+      Don’t have an account? <a id="toggle-form">Sign Up</a>
+    </div>
+  </div>
+
+  <script>
+    const formTitle = document.getElementById("form-title");
+    const toggleForm = document.getElementById("toggle-form");
+    const authForm = document.getElementById("auth-form");
+
+    let isLogin = true;
+
+    toggleForm.addEventListener("click", () => {
+      isLogin = !isLogin;
+      formTitle.textContent = isLogin ? "Login" : "Sign Up";
+      toggleForm.textContent = isLogin ? "Sign Up" : "Login";
+      authForm.innerHTML = isLogin
+        ? `<input type="email" id="email" placeholder="Email" required />
+           <input type="password" id="password" placeholder="Password" required />
+           <button type="submit">Login</button>`
+        : `<input type="text" id="name" placeholder="Full Name" required />
+           <input type="email" id="email" placeholder="Email" required />
+           <input type="password" id="password" placeholder="Password" required />
+           <button type="submit">Sign Up</button>`;
+    });
+
+    authForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert(`${isLogin ? "Logged in" : "Signed up"} successfully!`);
+    });
+  </script>
+</body>
+</html>
