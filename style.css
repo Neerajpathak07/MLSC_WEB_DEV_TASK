@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f1f1f1;
+  --text: #111;
+  --nav-bg: #F7A5A5;
+  --accent: #febd69;
+}
+
+[data-theme="dark"] {
+  --bg: #131921;
+  --text: #111;
+  --nav-bg: #E06B80;
+  --accent: #ffa41c;
+}
+
+body {
+  font-family: "Amazon Ember", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* HEADER 1 */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  background: #131921;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+/* --- SEARCH BAR STYLING --- */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 38px;
+  width: 45%; 
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* Dropdown ("All") */
+.search-bar select {
+  border: none;
+  outline: none;
+  background: #f3f3f3;
+  font-size: 14px;
+  padding: 0 10px;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* Search text input */
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+/* Search button (🔍) */
+.search-btn {
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  height: 100%;
+  padding: 0 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.search-btn:hover {
+  background: #e69500; 
+}
+
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-actions button {
+  background: none;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.cart {
+  position: relative;
+  font-size: 1.3rem;
+}
+
+#cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: var(--accent);
+  color: black;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
+/* HEADER 2 */
+.sub-header {
+  background: var(--nav-bg);
+  color: white;
+  font-size: 0.9rem;
+}
+
+.sub-header ul {
+  display: flex;
+  list-style: none;
+  overflow-x: auto;
+}
+
+.sub-header li {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sub-header li:hover {
+  background: var(--accent);
+  color: black;
+}
+
+/* SLIDER */
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.arrow.left { left: 10px; }
+.arrow.right { right: 10px; }
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 10px;
+}
