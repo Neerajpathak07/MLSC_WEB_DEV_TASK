@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopHub - Your Premium Shopping Destination</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
+    </button>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo">
+                    <span class="logo-icon">🛍️</span>
+                    <span class="logo-text">ShopHub</span>
+                </div>
+                <div class="location">
+                    <span class="location-icon">📍</span>
+                    <div class="location-text">
+                        <span class="location-label">Deliver to</span>
+                        <span class="location-city">Mumbai 400001</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-bar">
+                <select class="search-category">
+                    <option>All</option>
+                    <option>Electronics</option>
+                    <option>Fashion</option>
+                    <option>Home & Kitchen</option>
+                    <option>Beauty</option>
+                </select>
+                <input type="text" placeholder="Search for products, brands and more...">
+                <button class="search-btn">🔍</button>
+            </div>
+
+            <div class="nav-right">
+                <button class="nav-btn" id="authBtn">
+                    <span>Hello, Sign in</span>
+                    <strong>Account & Lists</strong>
+                </button>
+                <button class="nav-btn">
+                    <span>Returns</span>
+                    <strong>& Orders</strong>
+                </button>
+                <button class="cart-btn">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count">0</span>
+                    <span>Cart</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="nav-links">
+            <a href="#" class="nav-link">All</a>
+            <a href="#" class="nav-link">Today's Deals</a>
+            <a href="#" class="nav-link">Electronics</a>
+            <a href="#" class="nav-link">Fashion</a>
+            <a href="#" class="nav-link">Home & Kitchen</a>
+            <a href="#" class="nav-link">Beauty</a>
+            <a href="#" class="nav-link">Books</a>
+            <a href="#" class="nav-link">Computers</a>
+            <a href="#" class="nav-link">New Releases</a>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="hero-slider-container">
+            <div class="hero-slider-track">
+
+                <div class="hero-card">
+                    <div class="hero-content">
+                        <div class="hero-badge">✨ Limited Time Offer</div>
+                        <h1 class="hero-title">Premium Smart Watch</h1>
+                        <p class="hero-subtitle">Track your fitness and stay connected with style.</p>
+                        <div class="hero-price">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-amount">₹1,499</span>
+                        </div>
+                        <button class="hero-cta">Shop Now →</button>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://www.livemint.com/lm-img/img/2024/01/10/600x338/best_smartwatch_1704869077620_1704869077770.jpg" alt="Premium Smart Watch">
+                    </div>
+                </div>
+
+                <div class="hero-card">
+                    <div class="hero-content">
+                        <div class="hero-badge">🔥 Hot Deal</div>
+                        <h1 class="hero-title">Wireless Earbuds</h1>
+                        <p class="hero-subtitle">Crystal clear sound with active noise cancellation.</p>
+                        <div class="hero-price">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-amount">₹999</span>
+                        </div>
+                        <button class="hero-cta">Shop Now →</button>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://cdn.mos.cms.futurecdn.net/JuQjXNLiDz6qMkQJyP4GwT.jpg" alt="Wireless Earbuds">
+                    </div>
+                </div>
+
+                <div class="hero-card">
+                    <div class="hero-content">
+                        <div class="hero-badge">⚡ Flash Sale</div>
+                        <h1 class="hero-title">Massage Gun</h1>
+                        <p class="hero-subtitle">Professional-grade recovery for athletes.</p>
+                        <div class="hero-price">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-amount">₹799</span>
+                        </div>
+                        <button class="hero-cta">Shop Now →</button>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://m.media-amazon.com/images/I/51m4m1hrwGL.jpg" alt="Massage Gun">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <button class="slider-btn prev" id="heroPrevBtn">←</button>
+        <button class="slider-btn next" id="heroNextBtn">→</button>
+    </section>
+    <main class="main-content">
+        <section class="category-grid" id="categories">
+            
+            <div class="category-card">
+                <h3 class="category-title">Revamp your home in style</h3>
+                <div class="category-items-grid">
+                    <a href="#" class="category-item">
+                        <div class="item-image-container">
+                            <img src="https://craftsmill.in/cdn/shop/files/Cover_1.jpg?v=1725622910" alt="Cushions">
+                        </div>
+                        <p>Cushion covers & bedsheets</p>
+                    </a>
+                    <a href="#" class="category-item">
+                        <div class="item-image-container">
+                            <img src="https://m.media-amazon.com/images/I/71e7WWlnfVL.jpg" alt="Figurines and Vases">
+                        </div>
+                        <p>Figurines, vases & more</p>
+                    </a>
+                    <a href="#" class="category-item">
+                        <div class="item-image-container">
+                            <img src="https://www.jiomart.com/images/product/original/rvhkfb13wx/yuxana-plastic-storage-boxes-organisation-storage-baskets-for-kitchen-cupboard-office-bathroom-toy-home-tidy-open-storage-bins-with-handles-2-pack-multicolor-product-images-orvhkfb13wx-p602431372-2-202306141527.jpg?im=Resize=(420,420)" alt="Home Storage">
+                        </div>
+                        <p>Home storage</p>
+                    </a>
+                    <a href="#" class="category-item">
+                        <div class="item-image-container">
+                            <img src="https://great-white.in/images/Lighting-Solutions-For-All-Your-Needs-thumb.jpg" alt="Lighting Solutions">
+                        </div>
+                        <p>Lighting solutions</p>
+                    </a>
+                </div>
+                <a href="#" class="category-link">Explore all →</a>
+            </div>
+
+            <div class="category-card">
+                <h3 class="category-title">Appliances for your home | Up to 55% off</h3>
+                <div class="category-items-grid">
+                    <a href="#" class="category-item">
+                        <div class="item-image-container">
+                            <img src="https://cpimg.tistatic.com/09941674/b/4/Voltas-Multi-Split-Air-Conditioner..jpg" alt="Air conditioners">
+                        </div>
+                        <p>Air conditioners</p>
+                    </a>
+                    <a href="#" class="category-item">
+                        <div class="item-image-container">
+                            <img src="https://m.media-amazon.com/images/I/81MA5zD2oPL._AC_UF350,350_QL80_.jpg" alt="Refrigerators">
+                        </div>
+                        <p>Refrigerators</p>
+                    </a>
+                    <a href="#" class="category-item">
+                        <div class="item-image-container">
+                            <img src="https://electronicparadise.in/cdn/shop/files/4_a1d5dc45-5e6f-4707-8763-a8dd664bb343.jpg?v=1759953848&width=1214" alt="Microwaves">
+                        </div>
+                        <p>Microwaves</p>
+                    </a>
+                    <a href="#" class="category-item">
+                        <div class="item-image-container">
+                            <img src="https://m.media-amazon.com/images/I/41fcfBHVW+L._SR290,290_.jpg" alt="Washing machines">
+                        </div>
+                        <p>Washing machines</p>
+                    </a>
+                </div>
+                <a href="#" class="category-link">See more →</a>
+            </div>
+
+            <div class="category-card">
+                <h3 class="category-title">Starting ₹149 | Headphones</h3>
+                <div class="category-items-grid">
+                    <a href="#" class="category-item">
+                        <div class="item-image-container">
+                            <img src="https://content.jdmagicbox.com/quickquotes/images_main/boat-rockerz-450-over-ear-headphones-801293617-pz1zvvq8.jpg?impolicy=queryparam&im=Resize=(360,360),aspect=fit" alt="boAt">
+                        </div>
+                        <p>Starting ₹249 | boAt</p>
+                    </a>
+                    <a href="#" class="category-item">
+                        <div class="item-image-container">
+                            <img src="https://m.media-amazon.com/images/I/41KK9mwNv7L._AC_UF1000,1000_QL80_.jpg" alt="boult">
+                        </div>
+                        <p>Starting ₹349 | boult</p>
+                    </a>
+                    <a href="#" class="category-item">
+                        <div class="item-image-container">
+                            <img src="https://www.gonoise.com/cdn/shop/files/Noise_Air_Buds_Black_1__compressedwebp85.webp?v=1746444346" alt="Noise">
+                        </div>
+                        <p>Starting ₹649 | Noise</p>
+                    </a>
+                    <a href="#" class="category-item">
+                        <div class="item-image-container">
+                            <img src="https://shop.zebronics.com/cdn/shop/files/Zeb-Havoc-pic1.jpg?v=1717221774&width=1200" alt="Zebronics">
+                        </div>
+                        <p>Starting ₹949 | Zebronics</p>
+                    </a>
+                </div>
+                <a href="#" class="category-link">See all offers →</a>
+            </div>
+
+            <div class="category-card">
+                <h3 class="category-title">Under ₹499 | Home improvement</h3>
+                <div class="category-items-grid">
+                    <a href="#" class="category-item">
+                        <div class="item-image-container">
+                            <img src="https://i.etsystatic.com/21963568/r/il/de640e/5086782258/il_1080xN.5086782258_vsnb.jpg" alt="Cleaning supplies">
+                        </div>
+                        <p>Under ₹199 | Cleaning supplies</p>
+                    </a>
+                    <a href="#" class="category-item">
+                        <div class="item-image-container">
+                            <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/rack-shelf/f/e/p/bathroom-4-plastic-bathroom-accessories-1-pack-bathroom-original-imagxuypaphybyzb.jpeg?q=20" alt="Bathroom accessories">
+                        </div>
+                        <p>Under ₹399 | Bathroom accessories</p>
+                    </a>
+                    <a href="#" class="category-item">
+                        <div class="item-image-container">
+                            <img src="https://m.media-amazon.com/images/I/61M0hwSS1UL._AC_UF1000,1000_QL80_.jpg" alt="Home tools">
+                        </div>
+                        <p>Under ₹499 | Home tools</p>
+                    </a>
+                    <a href="#" class="category-item">
+                        <div class="item-image-container">
+                            <img src="https://lifencolors.in/cdn/shop/products/2eeb6d_1e9031fc8003480ebe06f752abd2bed6_mv2.jpg?v=1753624655" alt="Wallpapers">
+                        </div>
+                        <p>Under ₹299 | Wallpapers</p>
+                    </a>
+                </div>
+                <a href="#" class="category-link">Explore all →</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top-link">
+            Back to top
+        </div>
+        <div class="footer-main">
+            <div class="footer-column">
+                <h3>Get to Know Us</h3>
+                <a href="#" class_name="footer-link">About Us</a>
+                <a href="#" class_name="footer-link">Careers</a>
+                <a href="#" class_name="footer-link">Press Releases</a>
+                <a href="#" class_name="footer-link">ShopHub Science</a>
+            </div>
+            <div class="footer-column">
+                <h3>Connect with Us</h3>
+                <a href="#" class_name="footer-link">Facebook</a>
+                <a href="#" class_name="footer-link">Twitter</a>
+                <a href="#" class_name="footer-link">Instagram</a>
+            </div>
+            <div class="footer-column">
+                <h3>Make Money with Us</h3>
+                <a href="#" class_name="footer-link">Sell on ShopHub</a>
+                <a href="#" class_name="footer-link">Sell under ShopHub Accelerator</a>
+                <a href="#" class_name="footer-link">Protect and Build Your Brand</a>
+                <a href="#" class_name="footer-link">ShopHub Global Selling</a>
+                <a href="#" class_name="footer-link">Become an Affiliate</a>
+                <a href="#" class_name="footer-link">Fulfilment by ShopHub</a>
+                <a href="#" class_name="footer-link">Advertise Your Products</a>
+                <a href="#" class_name="footer-link">ShopHub Pay on Merchants</a>
+            </div>
+            <div class="footer-column">
+                <h3>Let Us Help You</h3>
+                <a href="#" class_name="footer-link">Your Account</a>
+                <a href="#" class_name="footer-link">Returns Centre</a>
+                <a href="#" class_name="footer-link">100% Purchase Protection</a>
+                <a href="#" class_name="footer-link">ShopHub App Download</a>
+                <a href="#" class_name="footer-link">Help</a>
+            </div>
+        </div>
+        <div class="footer-sub">
+            <div class="footer-logo-lang">
+                <div class="logo">
+                    <span class="logo-icon">🛍️</span>
+                    <span class="logo-text">ShopHub</span>
+                </div>
+                <button class="footer-lang-btn">English</button>
+                <button class="footer-lang-btn">India</button>
+            </div>
+        </div>
+        <div class="footer-services">
+            <div class="footer-services-grid">
+                <a href="#" class="service-item">
+                    <strong>AbeBooks</strong>
+                    <small>Books, art & collectibles</small>
+                </a>
+                <a href="#" class="service-item">
+                    <strong>ShopHub Web Services</strong>
+                    <small>Scalable Cloud Computing</small>
+                </a>
+                <a href="#" class="service-item">
+                    <strong>Audible</strong>
+                    <small>Download Audio Books</small>
+                </a>
+                <a href="#" class="service-item">
+                    <strong>IMDb</strong>
+                    <small>Movies, TV & Celebrities</small>
+                </a>
+                <a href="#" class_name="service-item">
+                    <strong>Shopbop</strong>
+                    <small>Designer Fashion Brands</small>
+                </a>
+                <a href="#" class="service-item">
+                    <strong>ShopHub Business</strong>
+                    <small>Everything For Your Business</small>
+                </a>
+                <a href="#" class="service-item">
+                    <strong>Prime Now</strong>
+                    <small>2-Hour Delivery on Everyday Items</small>
+                </a>
+                <a href="#" class="service-item">
+                    <strong>ShopHub Prime Music</strong>
+                    <small>100 million songs, ad-free</small>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="authModal">
+        <div class="modal-container">
+            <button class="modal-close" id="closeModal">×</button>
+            
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h2 class="auth-logo">🛍️ ShopHub</h2>
+                    <div class="auth-tabs">
+                        <button class="auth-tab active" data-tab="login">Sign In</button>
+                        <button class="auth-tab" data-tab="signup">Create Account</button>
+                    </div>
+                </div>
+
+                <form class="auth-form active" id="loginForm">
+                    <h3 class="form-title">Welcome Back!</h3>
+                    <p class="form-subtitle">Sign in to continue shopping</p>
+                    
+                    <div class="form-group">
+                        <label for="loginEmail">Email or Phone</label>
+                        <input type="text" id="loginEmail" name="email" required>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <div class="password-field">
+                            <input type="password" id="loginPassword" name="password" required>
+                            <button type="button" class="password-toggle" data-target="loginPassword">👁️</button>
+                        </div>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="remember">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Sign In</button>
+
+                    <div class="divider">
+                        <span>or continue with</span>
+                    </div>
+
+                    <div class="social-buttons">
+                        <button type="button" class="social-btn google">
+                            <span class="social-icon">G</span> Google
+                        </button>
+                        <button type="button" class="social-btn facebook">
+                            <span class="social-icon">f</span> Facebook
+                        </button>
+                    </div>
+                </form>
+
+                <form class="auth-form" id="signupForm">
+                    <h3 class="form-title">Create Account</h3>
+                    <p class="form-subtitle">Join us for exclusive deals</p>
+                    
+                    <div class="form-group">
+                        <label for="signupName">Full Name</label>
+                        <input type="text" id="signupName" name="name" required>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupEmail">Email</label>
+                        <input type="email" id="signupEmail" name="email" required>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupPhone">Phone Number</label>
+                        <input type="tel" id="signupPhone" name="phone" required>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <div class="password-field">
+                            <input type="password" id="signupPassword" name="password" required>
+                            <button type="button" class="password-toggle" data-target="signupPassword">👁️</button>
+                        </div>
+                        <span class="error-message"></span>
+                        <small class="hint">At least 8 characters with uppercase, lowercase & number</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <div class="password-field">
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            <button type="button" class="password-toggle" data-target="confirmPassword">👁️</button>
+                        </div>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <label class="checkbox-label" style="margin-bottom: 24px;">
+                        <input type="checkbox" name="terms" required>
+                        <span>I agree to the Terms & Conditions and Privacy Policy</span>
+                    </label>
+
+                    <button type="submit" class="submit-btn">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
